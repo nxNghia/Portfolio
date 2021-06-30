@@ -2,8 +2,11 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import pictureOfme from './Images/picture1.jpg';
+import { useState, useEffect } from 'react';
 
-const About = () => {
+const About = ({lan}) => {
+    const [about, setAbout] = useState([])
+
     const style = {
         avatar: {
             width: 400,
@@ -13,23 +16,41 @@ const About = () => {
         information: {
             fontSize: 30,
             paddingRight: 50,
+        },
+
+        container: {
+            paddingBottom: 50,
+            paddingTop: 20,
+        },
+
+        intro: {
+            fontSize: 40,
+            fontWeight: 'bold',
         }
     }
+
+    useEffect(() => {
+        fetchAbout()
+    }, [lan])
+
+    const fetchAbout = async () => {
+        let aboutFromServer;
+        if(lan)
+            aboutFromServer = await fetch('http://localhost:5000/e_about')
+        else
+            aboutFromServer = await fetch('http://localhost:5000/j_about')
+        const data = await aboutFromServer.json()
+        setAbout(data)
+    }
+
     return (
-        <Container>
-            <p>About me</p>
+        <Container style={style.container}>
+            {lan ? <p style={style.intro}>About me</p> : <p style={style.intro}>私について</p>}
             <Grid container>
                 <Grid item xs={8}>
-                    <p style={style.information}>
-                        Call me Ghi-A if you find my name was difficult to pronounce. I am a third-year student at 
-                        Hanoi University of Science and Technology. A quiet person in daily life, I love watching normal thing
-                        around me, seeking special things from each of them. When working, I will become a concentrated and a grumpy
-                        person due to desire of bring the best to my very own product.
-                    </p>
-                    <p style={style.information}>
-                        Currently, I am having a interest in front-end development. The front-end library that i am using is ReactJS with
-                        Material-UI components. In the near future, I intend to learn other library like Angular, Vue.
-                    </p>
+                    {about.map((info) => (
+                        <p key={info.id} style={style.information}>{info.body}</p>
+                    ))}
                 </Grid>
                 <Grid>
                     <Avatar src={ pictureOfme } style={style.avatar}></Avatar>

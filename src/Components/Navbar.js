@@ -1,5 +1,6 @@
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import ScrollIntoView from 'react-scroll-into-view';
 
 const Navbar = () => {
     const style = {
@@ -22,13 +23,19 @@ const Navbar = () => {
             <Grid container spacing={5} style={style.nav}>
                 <Grid item xs={9} style={style.brand}><p>Portfolio</p></Grid>
                 <Grid item style={style.index}>
-                    <p>About</p>
+                    <ScrollIntoView selector='#about'>
+                        <p>About</p>
+                    </ScrollIntoView>
                 </Grid>
                 <Grid item style={style.index}>
-                    <p>Skills</p>
+                    <ScrollIntoView selector='#skill'>
+                        <p>Skills</p>
+                    </ScrollIntoView>
                 </Grid>
                 <Grid item style={style.index}>
-                    <p>Contact</p>
+                    <ScrollIntoView selector='#contact'>
+                        <p>Contact</p>
+                    </ScrollIntoView>
                 </Grid>
             </Grid>
         </Container>
