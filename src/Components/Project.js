@@ -32,7 +32,7 @@ const Project = ({projectImage, projectName, alt, projectLink}) => {
             top: show ? '5%' : '85%',
             transition: 'top 500ms',
             width: '100%',
-            height: '100%',
+            // height: '100%',
             bottom: 0,
         },
 
