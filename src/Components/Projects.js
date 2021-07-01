@@ -13,19 +13,19 @@ const Projects = ({lan}) => {
         }
     }
 
-    const [projects, setProject] = useState([])
+    const [projects, setProject] = useState([{"id": 1, "title": "2048", "link": "https://github.com/nxNghia/2048", "thumbnail": "2048.png"}])
 
-    useEffect(() => {
-        fetchProjects()
-        console.log(projects)
-    }, [])
+    // useEffect(() => {
+    //     fetchProjects()
+    //     console.log(projects)
+    // }, [])
 
-    const fetchProjects = async () => {
-        const projectsFromServer = await fetch('http://localhost:5000/e_projects')
-        const data = await projectsFromServer.json()
-        console.log(data)
-        setProject(data)
-    }
+    // const fetchProjects = () => {
+    //     const projectsFromServer = await fetch('http://localhost:5000/e_projects')
+    //     const data = await projectsFromServer.json()
+    //     console.log(data)
+    //     setProject(projects)
+    // }
 
     return (
         <Container>
