@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { animated } from 'react-spring';
 
-const Project = ({projectImage, projectName, alt, projectLink}) => {
+const Project = ({projectImage, projectName, alt, projectLink, projectInfo}) => {
     const [show, setShow] = useState(false)
     const style = {
         paper: {
@@ -10,7 +10,8 @@ const Project = ({projectImage, projectName, alt, projectLink}) => {
             position: 'relative',
             width: '100%',
             marginBottom: 20,
-            backgroundColor: '#555555',
+            borderRadius: '5%',
+            background: '#555555',
             boxSizing: 'border-box',
             paddingTop: '120%',
         },
@@ -28,8 +29,7 @@ const Project = ({projectImage, projectName, alt, projectLink}) => {
             color: '#ffffff',
             fontWeight: 'bold',
             position: 'absolute',
-            top: show ? '5%' : '85%',
-            transition: 'top 500ms',
+            top: '35%',
             width: '100%',
             bottom: 0,
         },
@@ -37,7 +37,6 @@ const Project = ({projectImage, projectName, alt, projectLink}) => {
         link: {
             position: 'absolute',
             width: '100%',
-            background: show ? 'rgba(50, 50, 50, 0.5)' : 'rgba(255, 255, 255, 0)',
             top: 0,
             left: 0,
             color: '#ffffff',
@@ -46,23 +45,20 @@ const Project = ({projectImage, projectName, alt, projectLink}) => {
             transition: 'background 250ms',
         },
 
-        p: {
-            position: 'relative',
-            top: '40%',
+        name: {
+            background: show ? 'rgba(85, 85, 85, 0.8)' : 'transparent',
+            fontSize: show ? 'xx-large' : 'large',
             opacity: show ? 1 : 0,
-            transition: 'opacity 500ms',
+            transition: 'background 250ms, font-size 500ms, opacity 250ms'
         }
     }
 
     return (
         <div style={style.paper} onMouseEnter={() => {setShow(true)}} onMouseLeave={() => {setShow(false)}}>
-            <img src={'/assets/images/' + projectImage} style={style.image} alt={alt}></img>
-            <animated.div style={style.detail}>
-                <p>{projectName}</p>
-            </animated.div>
             <a href={projectLink}>
-                <animated.div style={style.link}>
-                    <p style={style.p}>Click</p>
+                <img src={'/assets/images/' + projectImage} style={style.image} alt={alt}></img>
+                <animated.div style={style.detail}>
+                    <p style={style.name}>{projectName}</p>
                 </animated.div>
             </a>
         </div>

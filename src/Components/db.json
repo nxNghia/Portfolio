@@ -29,13 +29,14 @@
     {
       "id": 3,
       "title": "Snake",
-      "link": "https://nxnghia.github.io/Snake_game/"
+      "link": "https://nxnghia.github.io/Snake_game/",
+      "thumbnail": "Snake.png"
     }
   ],
   "e_about": [
     {
       "id": 1,
-      "body": "Call me Ghi-A if you find my name was difficult to pronounce. I am a third year student at Hanoi University of Science and Technology with a disire of making the world to become more comfortable by technology. I can speak in English conversationally and a little bit of Japanese. I have experience in front-end development with using ReactJS and Vue.js library."
+      "body": "Call me Ghi-A if you find my name was difficult to pronounce. I am a third year student at Hanoi University of Science and Technology with a disire of making the world to become more comfortable by technology. I can speak in English conversationally and a little bit of Japanese. About my IT skill, JavaScript is my most frequently used programing language, while C++ has been my favourite language from the first time I learned to programing."
     },
     {
       "id": 2,
@@ -46,7 +47,7 @@
   "j_about": [
     {
       "id": 1,
-      "body": "はじめまして、私はグエン・スアン・ギアと申します。私はハノイ工科大学の三年生です。私の欲望はITで世界をもっと便利にすることです。私は英語と少しの日本語で会話できます。ITスキルにとって、私はReactJSの経験があります。それも、私は少しのVue.jsができます。"
+      "body": "はじめまして、私はグエン・スアン・ギアと申します。私はハノイ工科大学の三年生です。私の欲望はITで世界をもっと便利にすることです。私は英語と少しの日本語で会話できます。ITスキルにとって、私のよく使用する言語はC++とJavaScriptです。私は本当に経験がある人に学習してもらうのを楽しみます。"
     },
     {
       "id": 2,

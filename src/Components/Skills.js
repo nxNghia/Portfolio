@@ -7,7 +7,6 @@ import JavaScript from './Icons/JavaScript.svg';
 import React from './Icons/React.svg';
 import Java from './Icons/Java.svg';
 import Dotnet from './Icons/DotNet.svg';
-import OpenGL from './Icons/OpenGL.svg';
 
 const Skills = ({lan}) => {
     const style = {
@@ -42,7 +41,6 @@ const Skills = ({lan}) => {
             <Grid container spacing={10} justify='center'>
                 <Grid item><Skill icon={React} width={100} height={100} alt='React'></Skill></Grid>
                 <Grid item><Skill icon={Dotnet} width={100} height={100} alt='Dotnet'></Skill></Grid>
-                <Grid item><Skill icon={OpenGL} width={100} height={100} alt='OpenGL'></Skill></Grid>
             </Grid>
         </Container>
     )
