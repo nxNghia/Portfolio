@@ -1,7 +1,6 @@
 import Paper from '@material-ui/core/Paper';
 import { animated } from 'react-spring';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Skill = ({icon, width, height, alt}) => {
     const [Scale, setScale] = useState(false)

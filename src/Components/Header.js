@@ -1,7 +1,7 @@
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import Container from '@material-ui/core/Container';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import data from './db.json';
 
 const Header = ({lan}) => {
     const [speed, setSpeed] = useState(1)
@@ -9,9 +9,6 @@ const Header = ({lan}) => {
     const [index, setIndex] = useState(0)
     const [text, setText] = useState('')
     const [me, setMe] = useState('')
-
-    const [engMe, setEngMe] = useState('Nguyen Xuan Nghia')
-    const [japMe, setJapMe] = useState('グエン・スアン・ギア')
 
     const style = {
         header: {
@@ -32,13 +29,16 @@ const Header = ({lan}) => {
 
         p: {
             position: 'absolute',
-            // width: '100%',
             left: '30%'
         }
     }
 
     useEffect(() => {
-        fetchName()
+        if(lan)
+            setMe(data.e_me[0].name)
+        else
+            setMe(data.j_me[0].name)
+        setIndex(0)
     }, [lan])
 
     useEffect(() => {
@@ -62,19 +62,6 @@ const Header = ({lan}) => {
         }, speed);
         return () => clearInterval(typing)
     }, [index, lan])
-
-    const fetchName = () => {
-        let nameFromServer;
-        if(lan)
-            // nameFromServer = await fetch('http://localhost:5000/e_me')
-            setMe(engMe)
-        else
-            // nameFromServer = await fetch('http://localhost:5000/j_me')
-            setMe(japMe)
-        // const data = await nameFromServer.json()
-        // setMe(data)
-        setIndex(0)
-    }
 
     return (
         <Container style={style.header}>

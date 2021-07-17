@@ -1,4 +1,3 @@
-import Paper from '@material-ui/core/Paper';
 import { useState } from 'react';
 import { animated } from 'react-spring';
 
@@ -32,7 +31,6 @@ const Project = ({projectImage, projectName, alt, projectLink}) => {
             top: show ? '5%' : '85%',
             transition: 'top 500ms',
             width: '100%',
-            // height: '100%',
             bottom: 0,
         },
 
@@ -57,9 +55,6 @@ const Project = ({projectImage, projectName, alt, projectLink}) => {
     }
 
     return (
-        // <Paper xs={4} style={style.paper} onMouseEnter={() => {setShow(true)}} onMouseLeave={() => {setShow(false)}}>
-            
-        // </Paper>
         <div style={style.paper} onMouseEnter={() => {setShow(true)}} onMouseLeave={() => {setShow(false)}}>
             <img src={'/assets/images/' + projectImage} style={style.image} alt={alt}></img>
             <animated.div style={style.detail}>
@@ -67,7 +62,7 @@ const Project = ({projectImage, projectName, alt, projectLink}) => {
             </animated.div>
             <a href={projectLink}>
                 <animated.div style={style.link}>
-                    <p style={style.p}>Github</p>
+                    <p style={style.p}>Click</p>
                 </animated.div>
             </a>
         </div>

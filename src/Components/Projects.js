@@ -1,10 +1,11 @@
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Project from './Project';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import data from './db.json';
 
 const Projects = ({lan}) => {
+    const [projects, setProject] = useState([])
     const style = {
         intro: {
             fontSize: 40,
@@ -13,19 +14,9 @@ const Projects = ({lan}) => {
         }
     }
 
-    const [projects, setProject] = useState([{"id": 1, "title": "2048", "link": "https://github.com/nxNghia/2048", "thumbnail": "2048.png"}])
-
-    // useEffect(() => {
-    //     fetchProjects()
-    //     console.log(projects)
-    // }, [])
-
-    // const fetchProjects = () => {
-    //     const projectsFromServer = await fetch('http://localhost:5000/e_projects')
-    //     const data = await projectsFromServer.json()
-    //     console.log(data)
-    //     setProject(projects)
-    // }
+    useEffect(() => {
+        setProject(data.e_projects)
+    }, [])
 
     return (
         <Container>

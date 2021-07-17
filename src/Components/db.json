@@ -19,6 +19,17 @@
       "title": "2048",
       "link": "https://github.com/nxNghia/2048",
       "thumbnail": "2048.png"
+    },
+    {
+      "id": 2,
+      "title": "Flappy bird",
+      "link": "https://nxnghia.github.io/FlappyBird/",
+      "thumbnail": "Flappy.png"
+    },
+    {
+      "id": 3,
+      "title": "Snake",
+      "link": "https://nxnghia.github.io/Snake_game/"
     }
   ],
   "e_about": [
