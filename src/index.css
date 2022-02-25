@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Roboto:wght@300&display=swap');
 
+html
+{
+    height: 100%;
+}
+
 body
 {
   font-family: 'Roboto', sans-serif;
+  background: linear-gradient(180deg, rgba(238,252,255,1) 50%, rgba(244,255,211,1) 100%);
   margin: 0;
 }
-
