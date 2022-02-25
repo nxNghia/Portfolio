@@ -4,12 +4,13 @@ export const useStyles = makeStyles(() => ({
     root: {
         width: '80%',
         margin: 'auto',
-        marginTop: 100
+        marginTop: 100,
+        marginBottom: 150
     },
     me_image: {
         borderRadius: '50%',
         width: 'auto',
-        height: 'auto'
+        height: '100%'
     },
     image_container: {
         flexGrow: 1,
@@ -18,7 +19,13 @@ export const useStyles = makeStyles(() => ({
     },
     basic_info: {
         display: 'flex',
-        height: 300,
+        height: '50%',
+        '& li': {
+            fontSize: 'x-large',
+            marginBottom: 20
+        }
+    },
+    basic_info_smaller: {
         '& li': {
             fontSize: 'x-large',
             marginBottom: 20
@@ -35,7 +42,6 @@ export const useStyles = makeStyles(() => ({
         textAlign: 'center',
         margin: 'auto',
         width: '60%',
-        fontStyle: 'italic',
-        height: 'calc(100vh - 600px)'
+        fontStyle: 'italic'
     }
 }))

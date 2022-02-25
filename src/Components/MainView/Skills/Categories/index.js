@@ -10,8 +10,10 @@ const Category = ({ name, data }) => {
     return (
         <Box className={classes.category}>
             <Typography variant="h5" className={classes.title}>{name}</Typography>
-            <Currently skills={data.currently}/>
-            {data.interesting.length !== 0 && <Interest skills={data.interesting}/>}
+            <Box className={classes.skills_container}>
+                <Currently skills={data.currently}/>
+                {data.interesting.length !== 0 && <Interest skills={data.interesting}/>}
+            </Box>
         </Box>
     )
 }

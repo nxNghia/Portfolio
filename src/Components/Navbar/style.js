@@ -4,7 +4,8 @@ export const useStyles = makeStyles(() => ({
     root: {
         background: 'inherit',
         boxShadow: 'none',
-        height: 80
+        height: 100,
+        paddingTop: 20
     },
     pageTitle: {
         color: '#000',

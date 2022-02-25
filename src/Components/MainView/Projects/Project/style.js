@@ -16,6 +16,21 @@ export const useStyles = makeStyles(() => ({
         },
         transition: 'box-shadow 250ms, background 250ms, color 250ms'
     },
+    root_smaller: {
+        width: '80%',
+        cursor: 'pointer',
+        background: '#fff',
+        marginBottom: 30,
+        padding: 20,
+        boxShadow: "1px 2px 5px",
+        borderRadius: 10,
+        '&:hover': {
+            boxShadow: "1px 5px 5px",
+            background: '#313131',
+            color: '#fff'
+        },
+        transition: 'box-shadow 250ms, background 250ms, color 250ms'
+    },
     chip: {
         marginLeft: 10,
         fontWeight: 'bold',

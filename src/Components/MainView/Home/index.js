@@ -1,4 +1,5 @@
 import { Box, SvgIcon, Typography } from "@material-ui/core"
+import { useMediaQuery } from 'react-responsive'
 
 import Me from '../../../Assets/avatar.jpg'
 import Contact from "./Contact"
@@ -7,10 +8,11 @@ import flag from "../../../Assets/Flag_of_Vietnam-Animated.gif"
 
 const Home = () => {
     const classes = useStyles()
+    const limit = useMediaQuery({maxWidth: 1098})
 
     return (
         <Box className={classes.root}>
-            <Box className={classes.basic_info}>
+            <Box className={limit ? classes.basic_info_smaller : classes.basic_info}>
                 <Box className={classes.basic_info_name}>
                     <Typography variant="h5">
                         Nguyen Xuan Nghia
