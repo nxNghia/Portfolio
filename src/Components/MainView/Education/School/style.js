@@ -7,7 +7,7 @@ export const useStyles = makeStyles(() => ({
         cursor: 'pointer'
     },
     img: {
-        width: 200,
+        width: 250,
         marginRight: 50
     },
     info: {

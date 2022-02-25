@@ -1,17 +1,13 @@
 import { Box } from "@material-ui/core";
-import { useSelector } from "react-redux";
 
 import Education from "./Education";
 import Home from "./Home";
 import Projects from "./Projects";
 import Skills from "./Skills";
-import Item from "./Skills/Items";
 import { useStyles } from "./style";
-import { pageIndexSelector } from "../../Selectors/ui.selector"
 
-const MainView = () => {
+const MainView = ({ pageIndex }) => {
     const classes = useStyles()
-    const pageIndex = useSelector(pageIndexSelector)
 
     const render = () => {
         switch (pageIndex)

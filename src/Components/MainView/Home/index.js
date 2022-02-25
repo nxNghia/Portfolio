@@ -1,6 +1,7 @@
-import { Box, SvgIcon, Typography } from "@material-ui/core"
+import { Box, Typography } from "@material-ui/core"
 import { useMediaQuery } from 'react-responsive'
 
+import "aos/dist/aos.css";
 import Me from '../../../Assets/avatar.jpg'
 import Contact from "./Contact"
 import { useStyles } from "./style"
@@ -31,7 +32,7 @@ const Home = () => {
                     <img src={Me} alt='me' className={classes.me_image}/>
                 </Box>
             </Box>
-            <Box className={classes.quote}>
+            <Box data-aos="slide-up" className={!limit ? classes.quote : classes.quote_smaller}>
                 <Typography variant="h6">
                     “We keep moving forward, opening new doors, and doing new things, because we're curious and curiosity keeps leading us down new paths.”
                 </Typography>

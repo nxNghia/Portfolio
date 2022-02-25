@@ -14,7 +14,8 @@ export const useStyles = makeStyles(() => ({
             background: '#313131',
             color: '#fff'
         },
-        transition: 'box-shadow 250ms, background 250ms, color 250ms'
+        transition: 'box-shadow 250ms, background 250ms, color 250ms',
+        minHeight: 150
     },
     root_smaller: {
         width: '80%',

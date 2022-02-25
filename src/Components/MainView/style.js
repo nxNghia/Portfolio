@@ -4,5 +4,6 @@ export const useStyles = makeStyles(() => ({
     root: {
         width: '90%',
         margin: 'auto',
+        display: 'block'
     }
 }))

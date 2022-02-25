@@ -9,10 +9,10 @@ const Skills = () => {
 
     return (
         <Box className={classes.root}>
-            <Category name="Language" data={languages}/>
-            <Category name="Framework / Library" data={framework}/>
-            <Category name="Database" data={database}/>
-            <Category name="Other" data={other}/>
+            <Category name="Language" data={languages} turn={0}/>
+            <Category name="Framework / Library" data={framework} turn={1}/>
+            <Category name="Database" data={database} turn={2}/>
+            <Category name="Other" data={other} turn={3}/>
         </Box>
     )
 }

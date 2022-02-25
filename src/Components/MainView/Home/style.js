@@ -43,5 +43,11 @@ export const useStyles = makeStyles(() => ({
         margin: 'auto',
         width: '60%',
         fontStyle: 'italic'
+    },
+    quote_smaller: {
+        marginTop: 150,
+        textAlign: 'center',
+        margin: 'auto',
+        fontStyle: 'italic'
     }
 }))

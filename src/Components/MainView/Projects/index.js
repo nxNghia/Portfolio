@@ -11,8 +11,10 @@ const Projects = () => {
 
     return (
         <Box className={limit ? classes.root_smaller : classes.root}>
-            <Box className={classes.projects_container}>
-                {data.map((item, index) => <Project key={index} data={item}/>)}
+            <Box className={classes.projects}>
+                <Box className={classes.projects_container}>
+                    {data.map((item, index) => <Project key={index} data={item} turn={index}/>)}
+                </Box>
             </Box>
             <Box className={classes.button_container}>
                 <Button color="secondary" variant="contained" size="large" onClick={() => window.open("https://github.com/nxNghia?tab=repositories", "_blank")}>View more projects</Button>

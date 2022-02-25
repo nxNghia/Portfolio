@@ -5,11 +5,15 @@ export const useStyles = makeStyles(() => ({
         paddingLeft: 40,
         paddingRight: 40,
         marginTop: 150,
-        marginBottom: 150
+        marginBottom: 150,
+        minHeight: 550
     },
     root_smaller: {
         marginTop: 150,
         marginBottom: 150
+    },
+    projects: {
+        minHeight: 550,
     },
     projects_container: {
         display: 'flex',

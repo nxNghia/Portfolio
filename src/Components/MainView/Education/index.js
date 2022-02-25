@@ -1,5 +1,6 @@
 import { Box } from "@material-ui/core"
 import { useMediaQuery } from 'react-responsive'
+import "aos/dist/aos.css";
 
 import { data } from "./data"
 import School from "./School"
@@ -11,7 +12,7 @@ const Education = () => {
 
     return (
         <Box className={limit ? classes.root_smaller : classes.root}>
-            {data.map((item, index) => <School key={index} item={item}/>)}
+            {data.map((item, index) => <School key={index} item={item} turn={index}/>)}
         </Box>
     )
 }
