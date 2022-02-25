@@ -9,8 +9,9 @@ export const useStyles = makeStyles(() => ({
     pageTitle: {
         color: '#000',
         flexGrow: 1,
-        fontSize: 'xx-large',
-        cursor: 'pointer'
+        fontSize: '50px',
+        cursor: 'pointer',
+        fontWeight: 'bold'
     },
     pageIndex: {
         color: '#000',
