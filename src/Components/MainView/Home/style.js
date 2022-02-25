@@ -4,7 +4,7 @@ export const useStyles = makeStyles(() => ({
     root: {
         width: '80%',
         margin: 'auto',
-        marginTop: 50
+        marginTop: 100
     },
     me_image: {
         borderRadius: '50%',
@@ -31,7 +31,7 @@ export const useStyles = makeStyles(() => ({
         }
     },
     quote: {
-        marginTop: 100,
+        marginTop: 150,
         textAlign: 'center',
         margin: 'auto',
         width: '60%',

@@ -4,7 +4,8 @@ export const useStyles = makeStyles(() => ({
     root: {
         paddingLeft: 40,
         paddingRight: 40,
-        marginTop: 100
+        marginTop: 100,
+        marginBottom: 100
     },
     projects_container: {
         display: 'flex',

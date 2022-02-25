@@ -13,7 +13,7 @@ const Projects = () => {
                 {data.map((item, index) => <Project key={index} data={item}/>)}
             </Box>
             <Box className={classes.button_container}>
-                <Button color="secondary" variant="contained" onClick={() => window.open("https://github.com/nxNghia?tab=repositories", "_blank")}>View more projects</Button>
+                <Button color="secondary" variant="contained" size="large" onClick={() => window.open("https://github.com/nxNghia?tab=repositories", "_blank")}>View more projects</Button>
             </Box>
         </Box>
     )
