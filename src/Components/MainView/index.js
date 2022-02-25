@@ -1,3 +1,4 @@
+import Education from "./Education";
 import Home from "./Home";
 import Projects from "./Projects";
 import Skills from "./Skills";
@@ -10,7 +11,8 @@ const MainView = () => {
     return (
         // <Home className={classes.root}/>
         // <Skills/>
-        <Projects/>
+        // <Projects/>
+        <Education/>
     )
 }
 
